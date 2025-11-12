@@ -1,39 +1,40 @@
-using MyWebApiWithControllers.Model;
+using MyWebApiWithControllers.DatabaseModel;
 
 namespace MyWebApiWithControllers.Repository;
 
-public class TransactionRepository : ITransactionRepository {
-    private List<Transaction> transactions;
 
-    public TransactionRepository() 
+
+public class TransactionRepository : ITransactionRepository
+{
+    private readonly Whiyes5oContext context;
+
+
+    public TransactionRepository(Whiyes5oContext context)
     {
-        transactions = new List<Transaction>{
-            new Transaction { TransactionId=1 },
-            new Transaction { TransactionId=2 }
-        };
+        this.context = context;
     }
 
-    public List<Transaction> GetAllTransactions() 
+    public List<Transaction> GetAllTransactions()
     {
-        return transactions;
+        return context.Transactions.ToList();
     }
 
-    public Transaction GetTransactionById(int id) 
+    public Transaction GetTransactionById(int id)
     {
-        return transactions.FirstOrDefault(t => t.TransactionId == id);
+        return context.Transactions.FirstOrDefault(t => t.Id == id);
     }
 
     public void Add(Transaction transaction)
     {
-        transactions.Add(transaction);
+        context.Transactions.Add(transaction);
     }
 
-    public void DeleteById(int id) 
+    public void DeleteById(int id)
     {
-        var transaction = transactions.FirstOrDefault(t => t.TransactionId == id);
+        var transaction = context.Transactions.FirstOrDefault(t => t.Id == id);
         if (transaction != null)
         {
-            transactions.Remove(transaction);
+            context.Transactions.Remove(transaction);
         }
     }
 }

@@ -1,4 +1,4 @@
-using MyWebApiWithControllers.Model;
+using MyWebApiWithControllers.DatabaseModel;
 using MyWebApiWithControllers.Repository;
 
 namespace MyWebApiWithControllers.Services;
