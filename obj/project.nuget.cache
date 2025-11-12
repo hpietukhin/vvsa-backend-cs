@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "R9t+6K81agc=",
+  "dgSpecHash": "GANSy83ny+Y=",
   "success": true,
-  "projectFilePath": "/Users/person/Documents/учеба/VVSA/csharp/MyWebApiWithControllers/MyWebApiWithControllers.csproj",
+  "projectFilePath": "/Users/havriil.pietukhin/uni/2nd/vvsa/vvsa-backend-cs/MyWebApiWithControllers.csproj",
   "expectedPackageFiles": [
-    "/Users/person/.nuget/packages/microsoft.aspnetcore.openapi/10.0.0/microsoft.aspnetcore.openapi.10.0.0.nupkg.sha512",
-    "/Users/person/.nuget/packages/microsoft.openapi/2.0.0/microsoft.openapi.2.0.0.nupkg.sha512",
-    "/Users/person/.nuget/packages/scalar.aspnetcore/2.10.1/scalar.aspnetcore.2.10.1.nupkg.sha512"
+    "/Users/havriil.pietukhin/.nuget/packages/microsoft.aspnetcore.openapi/10.0.0/microsoft.aspnetcore.openapi.10.0.0.nupkg.sha512",
+    "/Users/havriil.pietukhin/.nuget/packages/microsoft.openapi/2.0.0/microsoft.openapi.2.0.0.nupkg.sha512",
+    "/Users/havriil.pietukhin/.nuget/packages/scalar.aspnetcore/2.10.1/scalar.aspnetcore.2.10.1.nupkg.sha512"
   ],
   "logs": []
 }
