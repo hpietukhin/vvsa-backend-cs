@@ -6,36 +6,35 @@ namespace MyWebApiWithControllers.Repository;
 
 public class TransactionRepository : ITransactionRepository
 {
-    private readonly Whiyes5oContext whiyes5OContext;
+    private readonly Whiyes5oContext context;
 
-    private List<Transaction> transactions;
 
-    public TransactionRepository(Whiyes5oContext whiyes5OContext)
+    public TransactionRepository(Whiyes5oContext context)
     {
-        this.whiyes5OContext = whiyes5OContext;
+        this.context = context;
     }
 
     public List<Transaction> GetAllTransactions()
     {
-        return transactions;
+        return context.Transactions.ToList();
     }
 
     public Transaction GetTransactionById(int id)
     {
-        return transactions.FirstOrDefault(t => t.Id == id);
+        return context.Transactions.FirstOrDefault(t => t.Id == id);
     }
 
     public void Add(Transaction transaction)
     {
-        transactions.Add(transaction);
+        context.Transactions.Add(transaction);
     }
 
     public void DeleteById(int id)
     {
-        var transaction = transactions.FirstOrDefault(t => t.Id == id);
+        var transaction = context.Transactions.FirstOrDefault(t => t.Id == id);
         if (transaction != null)
         {
-            transactions.Remove(transaction);
+            context.Transactions.Remove(transaction);
         }
     }
 }
